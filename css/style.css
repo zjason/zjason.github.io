@@ -761,7 +761,7 @@ a {
   border-bottom: none;
 }
 .archives .archive-article-title {
-  font-size: 16px;
+  font-size: 20px;
   color: #333;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -774,7 +774,7 @@ a {
 .archives .archive-article-title span {
   display: block;
   color: #a8a8a8;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 14px;
   height: 7px;
   padding-left: 2px;
@@ -811,11 +811,11 @@ a {
   vertical-align: middle;
   zoom: 1;
   color: #666;
-  font-size: 14px;
+  font-size: 18px;
 }
 .archive-article-inner .article-meta .archive-article-date {
   cursor: default;
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 5px;
   margin-top: -10px;
 }
@@ -847,9 +847,10 @@ a {
   width: auto;
   max-width: 83px;
   padding-left: 8px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .body-wrap {
+  font-size: 20px;
   margin-bottom: 80px;
 }
 .article {
@@ -908,7 +909,7 @@ a {
 .article-index .brief {
   display: block;
   color: #a8a8a8;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 14px;
   height: 7px;
   padding-left: 2px;
@@ -978,7 +979,7 @@ a {
   border: 1px solid #ccc;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
   word-wrap: break-word;
-  font-size: 14px;
+  font-size: 20px;
 }
 .article-entry blockquote {
   background: #ddd;
@@ -1009,7 +1010,7 @@ a {
 }
 .article-entry ul,
 .article-entry ol {
-  font-size: 14px;
+  font-size: 20px;
   margin: 10px 0px;
 }
 .article-entry li ul,
@@ -1068,7 +1069,7 @@ a {
   padding: 5px 15px;
   overflow-x: auto;
   color: #657b83;
-  font-size: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
   text-shadow: 0 1px #444;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
@@ -1107,7 +1108,7 @@ a {
 }
 .article-meta {
   width: 150px;
-  font-size: 14;
+  font-size: 20px;
   text-align: right;
   position: absolute;
   right: 0;
@@ -1131,7 +1132,7 @@ a {
 .article-more-link a {
   background: #4d4d4d;
   color: #fff;
-  font-size: 12px;
+  font-size: 18px;
   padding: 2px 8px 4px;
   line-height: 16px;
   -webkit-border-radius: 2px;
@@ -1155,12 +1156,12 @@ a {
 }
 #article-nav .article-nav-link-wrap {
   margin: 0px 30px 0px 30px;
-  font-size: 14px;
+  font-size: 20px;
   color: #333;
 }
 #article-nav .article-nav-link-wrap .article-nav-title {
   display: inline-block;
-  font-size: 12px;
+  font-size: 18px;
   color: #aaa;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -1371,7 +1372,7 @@ a {
   border-bottom: none;
 }
 .archives .archive-article-title {
-  font-size: 16px;
+  font-size: 20px;
   color: #333;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -1384,7 +1385,7 @@ a {
 .archives .archive-article-title span {
   display: block;
   color: #a8a8a8;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 14px;
   height: 7px;
   padding-left: 2px;
@@ -1421,11 +1422,11 @@ a {
   vertical-align: middle;
   zoom: 1;
   color: #666;
-  font-size: 14px;
+  font-size: 18px;
 }
 .archive-article-inner .article-meta .archive-article-date {
   cursor: default;
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 5px;
   margin-top: -10px;
 }
@@ -1457,7 +1458,7 @@ a {
   width: auto;
   max-width: 83px;
   padding-left: 8px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .article-entry pre,
 .article-entry .highlight {
