@@ -137,10 +137,8 @@ body,
   height: 100%;
 }
 body {
-  font-family: "微软雅黑", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
   background: #fff;
-  color: rgba(0,0,0,0.6);
+  color: #000;
   -webkit-overflow-scrolling: touch;
 }
 h1,
@@ -1468,7 +1466,7 @@ a {
   padding: 10px 10px;
   overflow: auto;
   color: #4c4c4c;
-  line-height: 22.400000000000002px;
+  line-height: 28.8px;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {

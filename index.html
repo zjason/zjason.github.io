@@ -32,7 +32,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="null" class="js-avatar">
+			<img lazy-src="http://img1.gamersky.com/image2016/05/20160511_308_whx_9/gamersky_20small_40_20165111513D6A.jpg" class="js-avatar">
 			
 		</a>
 
@@ -158,7 +158,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="null" class="js-avatar">
+				<img lazy-src="http://img1.gamersky.com/image2016/05/20160511_308_whx_9/gamersky_20small_40_20165111513D6A.jpg" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -216,57 +216,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Template-in-C"><a href="#Template-in-C" class="headerlink" title="Template in C++"></a>Template in C++</h2><ul>
+        <h1 id="Template-in-C"><a href="#Template-in-C" class="headerlink" title="Template in C++"></a><strong>Template in C++</strong></h1><ul>
 <li><p>Intro to template</p>
-<p>Template are the basic way to implement generic programming, because template is independent from any particular type. We can use template to create a generic class or function that can apply different data type when we use it.</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>Example–Declare a generic function</p>
-<p>Declare a generic function, T is a generic data type.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</span><br><span class="line"><span class="function">T <span class="title">add</span><span class="params">(T a, T b)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Use the generic function to handle multiple data type.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">double</span> x = <span class="number">7.2</span>, y = <span class="number">5.6</span>;</span><br><span class="line">  z = add(x,y);</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"double: "</span> &lt;&lt; z &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">int</span> a = <span class="number">4</span>, b = <span class="number">6</span>;</span><br><span class="line">  t = add(a,b);</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"int: "</span> &lt;&lt; t &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>This example above shows that we can declare one generic function to handle both int and double calculation.</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>Example–Declare a generic class</p>
-<p>Declare a generic LinkedList Node class, T is a generic data type. In this case we can store any type of data in our LinkedList Node.</p>
-</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> Node&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  T data;</span><br><span class="line">  Node *next;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Node()&#123;next = <span class="literal">nullptr</span>&#125;;</span><br><span class="line">  ~Node()&#123;&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<ul>
-<li><p>Problem encountered</p>
-<p>For a larger class, we will have .h file for declaration and .cpp file for implementation. When I trying to create a generic class for binary search tree node in .h and .cpp file. I got a link error. Error code: link2019.</p>
-<p>My code in header file:</p>
-</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> Node&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  T data;</span><br><span class="line">  Node *left;</span><br><span class="line">  Node *right;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Node();</span><br><span class="line">  ~Node();</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">setData</span><span class="params">(T newData)</span></span>;</span><br><span class="line">  <span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  My code in .cpp file:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"Node.h"</span></span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">Node&lt;T&gt;::Node()&#123;</span><br><span class="line">  left = nullprt;</span><br><span class="line">  right = nullprt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">Node&lt;T&gt;::~Node()&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line"><span class="keyword">void</span> Node&lt;T&gt;::setData(T newData)&#123;</span><br><span class="line">  data = newData;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">T Node&lt;T&gt;::getData()&#123;</span><br><span class="line">  <span class="keyword">return</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>When I trying to create a Node in main to test, I got error link2019.</p>
-<hr>
-<ul>
-<li>How to slove this Problem</li>
-</ul>
-<p>There are two method to slove this Problem. The <strong>first method</strong> is using .tpp file</p>
-<p>  My code in header file:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> Node&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  T data;</span><br><span class="line">  Node *left;</span><br><span class="line">  Node *right;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Node();</span><br><span class="line">  ~Node();</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">setData</span><span class="params">(T newData)</span></span>;</span><br><span class="line">  <span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"Node.tpp"</span></span></span><br></pre></td></tr></table></figure></p>
-<p>  My code in .tpp file:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">Node&lt;T&gt;::Node()&#123;</span><br><span class="line">  left = nullprt;</span><br><span class="line">  right = nullprt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">Node&lt;T&gt;::~Node()&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line"><span class="keyword">void</span> Node&lt;T&gt;::setData(T newData)&#123;</span><br><span class="line">  data = newData;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">T Node&lt;T&gt;::getData()&#123;</span><br><span class="line">  <span class="keyword">return</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  The <strong>second method</strong> is Explicitly instantiate all the template instances you will need.</p>
-<p>  My code in header file:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> Node&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  T data;</span><br><span class="line">  Node *left;</span><br><span class="line">  Node *right;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Node();</span><br><span class="line">  ~Node();</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">setData</span><span class="params">(T newData)</span></span>;</span><br><span class="line">  <span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  My code in .cpp file:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"Node.h"</span></span></span><br><span class="line"><span class="keyword">template</span> <span class="keyword">class</span> Node&lt;<span class="keyword">int</span>&gt;</span><br><span class="line"><span class="keyword">template</span> <span class="keyword">class</span> Node&lt;<span class="keyword">double</span>&gt;</span><br><span class="line"><span class="keyword">template</span> <span class="keyword">class</span> Node&lt;<span class="built_in">string</span>&gt;</span><br><span class="line">......</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">Node&lt;T&gt;::Node()&#123;</span><br><span class="line">  left = nullprt;</span><br><span class="line">  right = nullprt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">Node&lt;T&gt;::~Node()&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line"><span class="keyword">void</span> Node&lt;T&gt;::setData(T newData)&#123;</span><br><span class="line">  data = newData;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span><br><span class="line">T Node&lt;T&gt;::getData()&#123;</span><br><span class="line">  <span class="keyword">return</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<ul>
-<li>For more detail about why this problem happen, look at <a href="https://isocpp.org/wiki/faq/templates#templates-defn-vs-decl" target="_blank" rel="external">C++ Super-FAQ on this subject</a></li>
-</ul>
-
+<p>Template are the basic way to implement generic programming, because template is independent from any particular type. We can use template to create a generic class or function that can apply different data type when we use it.
       
     </div>
     
@@ -279,6 +231,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/06/06/C-Template/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -396,16 +352,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start
       
     </div>
     
@@ -414,6 +362,10 @@
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/06/06/hello-world/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
